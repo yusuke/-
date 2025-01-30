@@ -40,6 +40,7 @@ public interface タスクDao {
     @Update
     int update(タスク task);
 
+    @SuppressWarnings("UnusedReturnValue")
     @Sql("DELETE FROM タスク WHERE id = /* task.id */0")
     // 削除
     @Delete

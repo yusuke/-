@@ -7,7 +7,7 @@ import org.seasar.doma.GenerationType;
 import org.seasar.doma.Column;
 
 @SuppressWarnings({"NonAsciiCharacters", "unused"})
-@Entity(immutable = false) // データを更新可能にする
+@Entity() // データを更新可能にする
 public class タスク {
 
     @Id
