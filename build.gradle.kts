@@ -32,6 +32,9 @@ dependencies {
 	implementation("org.junit.jupiter:junit-jupiter:5.10.2")
 	implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("org.seasar.doma.boot:doma-spring-boot-starter:2.1.0")
+	annotationProcessor("org.seasar.doma:doma-processor:3.1.0")
+
 }
 
 tasks.named<Test>("test") {
