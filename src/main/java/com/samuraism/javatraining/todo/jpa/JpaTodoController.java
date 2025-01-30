@@ -9,11 +9,11 @@ import java.util.List;
 
 @SuppressWarnings("NonAsciiCharacters")
 @org.springframework.stereotype.Controller
-public class TodoController {
+public class JpaTodoController {
 
-    private final TaskRepository repository;
+    private final タスクRepository repository;
 
-    public TodoController(TaskRepository repository) {
+    public JpaTodoController(タスクRepository repository) {
         this.repository = repository;
     }
 

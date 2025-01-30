@@ -7,6 +7,6 @@ import java.util.List;
 
 @SuppressWarnings("NonAsciiCharacters")
 @Repository
-public interface TaskRepository extends JpaRepository<タスク, Integer> {
+public interface タスクRepository extends JpaRepository<タスク, Integer> {
     List<タスク> findAll();
 }

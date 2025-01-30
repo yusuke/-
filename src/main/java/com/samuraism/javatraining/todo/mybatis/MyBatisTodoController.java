@@ -20,14 +20,14 @@ public class MyBatisTodoController {
 
     @GetMapping("/mybatis/")
     String showTodos(Model model) {
-        List<MyBatisタスク> tasks = taskMapper.selectAllタスク();
+        List<タスク> tasks = taskMapper.selectAllタスク();
         model.addAttribute("tasks", tasks);
         return "todo";
     }
 
     @PostMapping("/mybatis/addTask")
     String addTask(@RequestParam String やること) {
-        MyBatisタスク task = new MyBatisタスク();
+        タスク task = new タスク();
         task.setやること(やること);
         taskMapper.insertタスク(task);
         return "redirect:/mybatis/";
@@ -35,7 +35,7 @@ public class MyBatisTodoController {
 
     @PostMapping("/mybatis/removeTask")
     String addTask(@RequestParam int id) {
-        MyBatisタスク task = new MyBatisタスク();
+        タスク task = new タスク();
         task.setId(id);
         taskMapper.deleteタスク(task.getId());
         return "redirect:/mybatis/";

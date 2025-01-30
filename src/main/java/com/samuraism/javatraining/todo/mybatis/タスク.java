@@ -2,7 +2,7 @@ package com.samuraism.javatraining.todo.mybatis;
 
 
 @SuppressWarnings("NonAsciiCharacters")
-public class MyBatisタスク {
+public class タスク {
     
     private Integer id;
     private String やること;
