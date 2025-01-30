@@ -1,4 +1,4 @@
-package com.samuraism.javatraining.todo;
+package com.samuraism.javatraining.todo.jpa;
 
 import jakarta.persistence.*;
 

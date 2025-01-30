@@ -30,6 +30,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.junit.jupiter:junit-jupiter:5.10.2")
+	implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
