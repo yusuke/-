@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 @Table(name = "タスク")
 public class タスク {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String やること;
 

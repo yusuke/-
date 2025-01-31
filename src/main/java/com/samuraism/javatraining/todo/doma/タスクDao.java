@@ -21,27 +21,15 @@ public interface タスクDao {
     @Select
     List<タスク> findAll();
 
-    @Sql("""
-            INSERT INTO タスク (id, やること
-            ) VALUES (
-            NEXT VALUE FOR タスク_SEQ,
-                /* task.やること */''
-            )
-            """)
     // 新規追加
     @Insert
     int insert(タスク task);
 
-    @Sql("""
-            UPDATE タスク SET やること = /* task.やること */''
-            WHERE id = /* task.id */0
-            """)
     // 更新
     @Update
     int update(タスク task);
 
     @SuppressWarnings("UnusedReturnValue")
-    @Sql("DELETE FROM タスク WHERE id = /* task.id */0")
     // 削除
     @Delete
     int delete(タスク task);
