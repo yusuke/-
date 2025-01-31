@@ -9,7 +9,7 @@ public interface タスクMapper {
     @Select("SELECT * FROM タスク WHERE id = #{id}")
     タスク selectタスクById(@Param("id") Integer id);
 
-    @Insert("INSERT INTO タスク (id, やること) VALUES (NEXT VALUE FOR タスク_SEQ, #{やること})")
+    @Insert("INSERT INTO タスク (やること) VALUES (#{やること})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void insertタスク(タスク task);
 

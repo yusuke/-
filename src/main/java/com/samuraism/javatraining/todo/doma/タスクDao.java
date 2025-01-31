@@ -21,13 +21,6 @@ public interface タスクDao {
     @Select
     List<タスク> findAll();
 
-    @Sql("""
-            INSERT INTO タスク (id, やること
-            ) VALUES (
-            NEXT VALUE FOR タスク_SEQ,
-                /* task.やること */''
-            )
-            """)
     // 新規追加
     @Insert
     int insert(タスク task);
