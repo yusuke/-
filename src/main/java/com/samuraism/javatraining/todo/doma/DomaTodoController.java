@@ -12,15 +12,15 @@ import java.util.List;
 @Controller
 public class DomaTodoController {
 
-    private final タスクService taskService;
+    private final タスクDao taskDao;
 
-    public DomaTodoController(タスクService taskService) {
-        this.taskService = taskService;
+    public DomaTodoController(タスクDao taskDao) {
+        this.taskDao = taskDao;
     }
 
     @GetMapping("/doma/")
     String showTodos(Model model) {
-        List<タスク> tasks = taskService.getAllTasks();
+        List<タスク> tasks = taskDao.findAll();
         model.addAttribute("tasks", tasks);
         return "todo";
     }
@@ -29,7 +29,7 @@ public class DomaTodoController {
     String addTask(@RequestParam String やること) {
         タスク task = new タスク();
         task.setやること(やること);
-        taskService.addTask(task);
+        taskDao.insert(task);
         return "redirect:/doma/";
     }
 
@@ -37,7 +37,7 @@ public class DomaTodoController {
     String addTask(@RequestParam int id) {
         タスク task = new タスク();
         task.setId(id);
-        taskService.deleteTask(task);
+        taskDao.delete(task);
         return "redirect:/doma/";
     }
 }
